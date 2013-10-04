@@ -1,0 +1,27 @@
+<div id="wrap" class="menu-page">
+    <!-- Fixed navbar -->
+    <div mobilemenu></div>
+    <!-- Begin page content -->
+    <div class="container">
+        <div class="spinner" ng-show="hideSurveys">
+            <div class="wrapper">
+                <div class="inner">
+                    <span>L</span>
+                    <span>o</span>
+                    <span>a</span>
+                    <span>d</span>
+                    <span>i</span>
+                    <span>n</span>
+                    <span>g</span>
+                </div>
+            </div>
+        </div>
+        <ul class="list-unstyled" ng-hide="hideSurveys">
+            <li ng-repeat="survey in surveys">
+                <a type="button" class="btn btn-main btn-default btn-lg btn-block" href="#/survey/{{survey.slug}}/1/offline">
+                    {{ survey.name }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
